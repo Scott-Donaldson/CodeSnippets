@@ -29,6 +29,7 @@ int main(int argc, char** argv){
 }
 
 int diceRoll (){
+    srandom(time());
     return (random() % 6) + 1;
 }
 
