@@ -14,6 +14,10 @@ int main(int argc, char** argv){
         printf("How many rolls of a dice?: ");
         scanf("%d", rolls);
     }
+    if(*rolls > 20){
+        printf("Exceeded total dice rolls (Max: 20)\n");
+        exit(0);
+    }
 
     int diceRolls[*rolls];
     for(size_t i = 0; i < *rolls; i++){
@@ -29,7 +33,7 @@ int diceRoll (){
 }
 
 void returnDiceRolls(int *array, int *arrlen){
-    char output[(*arrlen * 4) + 100];
+    char output[*arrlen + 20];
     strcat(output, "Results: ");
 
     int sum = 0;
@@ -37,7 +41,7 @@ void returnDiceRolls(int *array, int *arrlen){
     for(size_t i = 0; i < *arrlen; i++){
         int arrval = array[i];
         sum += arrval;
-        char str[(*arrlen + 1)*4];
+        char str[*arrlen + 4];
         sprintf(str,"%d ", arrval);
         strcat(output, str);
     }
