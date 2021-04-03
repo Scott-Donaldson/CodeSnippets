@@ -1,4 +1,5 @@
-// YOU WILL NEED TO HAVE p5sj
+// YOU WILL NEED TO HAVE p5js
+// Ported from processing to p5 from The Coding Train
 const CANVAS_WIDTH = parseInt(innerWidth);
 const CANVAS_HEIGHT = parseInt(innerHeight / 2);
 
